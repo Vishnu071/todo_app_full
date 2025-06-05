@@ -11,7 +11,10 @@ function register() {
     }),
   })
     .then((res) => res.json())
-    .then(alert);
+    .then((data) => {
+      alert(data.message || "Registered successfully!");
+    })
+    .catch((err) => console.error(err));
 }
 
 function login() {
